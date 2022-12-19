@@ -43,9 +43,9 @@ def post(title, date, content, imglist):
     time.sleep(2)
     browser.find_element_by_xpath(
         '//*[@id="post-admin"]/a[1]').send_keys(Keys.ENTER)
-    time.sleep(3)
+    time.sleep(10)
 
-    # browser.find_element_by_xpath('//span[contains(text(),"제목")]').click()
+    browser.find_element_by_xpath('//span[contains(text(),"제목")]').click()
     action = ActionChains(browser)
     action.send_keys(title + '(' + date + ')').perform()
 
